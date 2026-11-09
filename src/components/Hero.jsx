@@ -35,32 +35,26 @@ export default function Hero() {
           />
 
           <div className="relative flex flex-col justify-center px-6 pt-8 pb-10 md:w-176 md:px-14 md:py-20 lg:w-[62%] lg:py-16 xl:w-200 xl:px-16">
+            {/* Kept deliberately short: slogan, welcome, one supporting line, then actions.
+                The hospital's fuller introduction lives on the About page. */}
+            <p className="enter-up text-sm font-semibold tracking-[0.14em] text-accent-300 uppercase">
+              Your Health, Our Priority
+            </p>
             <h1
               id="hero-heading"
-              className="enter-up text-[2.125rem] leading-[1.1] font-bold sm:text-[2.5rem] text-white md:text-[3.5rem] xl:text-[4rem]"
+              style={{ '--enter-delay': '80ms' }}
+              className="enter-up mt-4 text-[2.125rem] leading-[1.1] font-bold text-white sm:text-[2.5rem] md:text-[3.5rem] xl:text-[4rem]"
             >
               Welcome to Victory Specialist Hospital
             </h1>
-            <p style={{ '--enter-delay': '120ms' }} className="enter-up mt-5 max-w-2xl font-display text-xl leading-snug font-medium text-accent-300 md:text-2xl">
-              Providing Trusted, Continuous Secondary Healthcare to{' '}
-              <span className="whitespace-nowrap">Ijebu Igbo</span> Since 1991.
+            <p
+              style={{ '--enter-delay': '180ms' }}
+              className="enter-up mt-5 max-w-xl text-lg leading-relaxed font-light text-white/90 md:text-xl md:leading-8"
+            >
+              Trusted, continuous secondary healthcare for individuals and families since{' '}
+              {hospital.established}, open 24 hours a day, 7 days a week.
             </p>
-            <div style={{ '--enter-delay': '220ms' }} className="enter-up mt-5 max-w-2xl space-y-3 text-base leading-relaxed font-light text-white/90 md:text-[1.0625rem]">
-              <p>
-                At Victory Specialist Hospital, we are dedicated to safeguarding the health and
-                well-being of individuals and families across the Ijebu North Local Government area.
-              </p>
-              <p>
-                Established on May 3, 1991, our licensed secondary healthcare facility combines over
-                three decades of clinical experience with a deep-rooted commitment to our local
-                community.
-              </p>
-              <p>
-                Operating 24 hours a day, 7 days a week, we ensure that professional, compassionate
-                medical care is always within your reach.
-              </p>
-            </div>
-            <div style={{ '--enter-delay': '320ms' }} className="enter-up mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
+            <div style={{ '--enter-delay': '280ms' }} className="enter-up mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
               <Link
                 to="/services"
                 className="inline-flex h-14 items-center justify-center gap-2 rounded-lg bg-accent-400 px-7 font-semibold text-brand-950 transition active:scale-[0.98] hover:bg-accent-300"
@@ -80,7 +74,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <dl style={{ '--enter-delay': '450ms' }} className="enter-up grid divide-y divide-line rounded-b-[2.25rem] border border-t-0 border-line bg-white shadow-card md:grid-cols-3 md:divide-x md:divide-y-0 md:rounded-b-hero">
+        <dl style={{ '--enter-delay': '400ms' }} className="enter-up grid divide-y divide-line rounded-b-[2.25rem] border border-t-0 border-line bg-white shadow-card md:grid-cols-3 md:divide-x md:divide-y-0 md:rounded-b-hero">
           {quickFacts.map(({ icon: Icon, label, value, href }) => (
             <div
               key={label}
