@@ -13,7 +13,8 @@ export const faqs = [
     question: 'Do I need to book an appointment before visiting the hospital?',
     answer: [
       'No appointment is required for general consultations. You can walk into Victory Specialist Hospital for general medical consultations and emergencies at any time.',
-      'However, for elective minor surgeries or specific consultations with specialist consultants, we recommend calling our care line on {phone} in advance to arrange a suitable time.',
+      'However, for elective minor surgeries or specific consultations with specialist consultants, we recommend booking in advance, either online or by calling our care line on {phone}, to arrange a suitable time.',
+      { link: { to: '/book-appointment', label: 'Book an appointment' } },
     ],
   },
   {

@@ -67,7 +67,7 @@ export default function GreatCareSection() {
               <ArrowRight className="size-5" aria-hidden="true" />
             </Link>
             <Link
-              to="/contact"
+              to="/book-appointment"
               className={`${buttonBase} border border-brand-900 text-brand-900 hover:bg-brand-900 hover:text-white`}
             >
               <MessageSquareText className="size-5" aria-hidden="true" />

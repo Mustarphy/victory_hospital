@@ -1,4 +1,4 @@
-import { ArrowRight, Clock, MapPin, Phone } from 'lucide-react'
+import { ArrowRight, CalendarCheck, Clock, MapPin, Phone } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { hospital } from '../data/site.js'
 
@@ -56,8 +56,15 @@ export default function Hero() {
             </p>
             <div style={{ '--enter-delay': '280ms' }} className="enter-up mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
               <Link
-                to="/services"
+                to="/book-appointment"
                 className="inline-flex h-14 items-center justify-center gap-2 rounded-lg bg-accent-400 px-7 font-semibold text-brand-950 transition active:scale-[0.98] hover:bg-accent-300"
+              >
+                <CalendarCheck className="size-5" aria-hidden="true" />
+                Book an Appointment
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex h-14 items-center justify-center gap-2 rounded-lg border border-white/70 px-7 font-semibold text-white transition active:scale-[0.98] hover:border-white hover:bg-white hover:text-brand-900"
               >
                 Explore Our Services
                 <ArrowRight className="size-5" aria-hidden="true" />

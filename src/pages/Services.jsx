@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react'
+import BookingCta from '../components/booking/BookingCta.jsx'
 import QuickActions from '../components/QuickActions.jsx'
 import ServiceSearch from '../components/services/ServiceSearch.jsx'
 import ServicesGrid from '../components/services/ServicesGrid.jsx'
@@ -23,6 +24,7 @@ export default function Services() {
       <ServicesHero />
       <ServiceSearch onSearch={handleSearch} />
       <ServicesGrid query={query} onClear={() => setQuery('')} headingRef={resultsHeadingRef} />
+      <BookingCta />
       <QuickActions />
     </>
   )

@@ -40,7 +40,10 @@ export default function MobileMenu({ id, isOpen, onNavigate }) {
             </li>
           ))}
         </ul>
-        <HeaderActions className="mt-4 grid gap-3 border-t border-line pt-5 sm:grid-cols-2 [&>a]:h-12" />
+        <HeaderActions
+          onNavigate={onNavigate}
+          className="mt-4 grid gap-3 border-t border-line pt-5 sm:grid-cols-2 [&>a]:h-12"
+        />
       </nav>
     </div>
   )

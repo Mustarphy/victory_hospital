@@ -18,4 +18,9 @@ export default defineConfig([
       parserOptions: { ecmaFeatures: { jsx: true } },
     },
   },
+  {
+    // Unit tests run on Node.
+    files: ['tests/**/*.js'],
+    languageOptions: { globals: { ...globals.node } },
+  },
 ])

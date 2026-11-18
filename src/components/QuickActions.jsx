@@ -40,8 +40,8 @@ export default function QuickActions() {
             </a>
           </Reveal>
           <Reveal as="li" delay={160}>
-            <Link to="/contact" className={linkClass}>
-              Get an opinion
+            <Link to="/book-appointment" className={linkClass}>
+              Book an appointment
               <Badge />
             </Link>
           </Reveal>

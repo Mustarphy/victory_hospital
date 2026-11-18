@@ -1,10 +1,11 @@
+import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { specialties } from '../data/specialties.js'
 import Reveal from './motion/Reveal.jsx'
 import { stagger } from '../hooks/useInViewOnce.js'
 
 function SpecialtyCard({ specialty, className = '', delay = 0 }) {
-  const { title, subtitle, description, tag, highlight, image } = specialty
+  const { id, title, subtitle, description, tag, highlight, image } = specialty
   const HighlightIcon = highlight.icon
 
   return (
@@ -35,6 +36,14 @@ function SpecialtyCard({ specialty, className = '', delay = 0 }) {
             </span>
             {highlight.label}
           </p>
+          <Link
+            to={`/book-appointment?specialty=${id}`}
+            className="group/book mt-4 inline-flex items-center gap-1.5 self-start rounded-sm text-sm font-semibold text-brand-600 underline-offset-4 hover:text-brand-800 hover:underline"
+          >
+            Book a consultation
+            <span className="sr-only"> in {title}</span>
+            <ArrowRight className="size-4 transition-transform group-hover/book:translate-x-0.5" aria-hidden="true" />
+          </Link>
         </div>
       </article>
     </Reveal>

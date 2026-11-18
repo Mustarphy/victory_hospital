@@ -15,7 +15,7 @@ export default function Leadership() {
       <title>Our Leadership | Victory Specialist Hospital</title>
       <meta
         name="description"
-        content={`Meet ${name}, ${role} of Victory Specialist Hospital, and read a message from our Chief Medical Officer.`}
+        content={`Meet ${name}, ${role} of Victory Specialist Hospital, and read a message from our Chief Medical Director.`}
       />
 
       <PageHero
@@ -69,7 +69,7 @@ export default function Leadership() {
                 ))}
               </blockquote>
               <figcaption className="mt-8 flex items-center gap-4 border-t border-line pt-6">
-                <span className="size-14 shrink-0 overflow-hidden rounded-full">
+                <span className="size-14 shrink-0 overflow-hidden rounded-full [&>img]:origin-[50%_22%] [&>img]:scale-[1.8]">
                   <LeaderPortrait leader={chairman} compact />
                 </span>
                 <span>

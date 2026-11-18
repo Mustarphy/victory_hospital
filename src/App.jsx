@@ -37,6 +37,7 @@ const router = createBrowserRouter([
           { path: ':slug', lazy: lazyPage(() => import('./pages/HealthArticle.jsx')) },
         ],
       },
+      { path: 'book-appointment', lazy: lazyPage(() => import('./pages/BookAppointment.jsx')) },
       // Testimonials was replaced by Health & Wellness; keep old links working.
       { path: 'testimonials', element: <Navigate to="/health-resources" replace /> },
       {

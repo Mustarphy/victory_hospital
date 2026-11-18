@@ -1,10 +1,16 @@
-import { Building2, CircleHelp, Stethoscope } from 'lucide-react'
+import { CalendarCheck, CircleHelp, Stethoscope } from 'lucide-react'
 import RelatedLinks from '../components/about/RelatedLinks.jsx'
 import HospitalLocation from '../components/location/HospitalLocation.jsx'
 import PageHero from '../components/PageHero.jsx'
 import { hospital } from '../data/site.js'
 
 const moreLinks = [
+  {
+    title: 'Book an Appointment',
+    description: 'Request a general, antenatal, follow-up or specialist consultation online.',
+    to: '/book-appointment',
+    icon: CalendarCheck,
+  },
   {
     title: 'Frequently Asked Questions',
     description: 'Appointments, opening hours, registration, insurance and more.',
@@ -16,12 +22,6 @@ const moreLinks = [
     description: 'Explore our family, maternal, children’s and surgical services.',
     to: '/services',
     icon: Stethoscope,
-  },
-  {
-    title: 'About Victory',
-    description: 'Who we are and how we have cared for families since 1991.',
-    to: '/about',
-    icon: Building2,
   },
 ]
 
@@ -36,7 +36,7 @@ export default function Contact() {
 
       <PageHero
         title="Contact Us"
-        intro="We are open 24 hours a day, every day. Call us or visit the hospital; no appointment is needed for general consultations."
+        intro="We are open 24 hours a day, every day. Call us, visit the hospital or book an appointment online; no appointment is needed for general consultations."
         image={{
           src: '/images/hospital/victory-specialist-hospital-building.jpg',
           width: 986,

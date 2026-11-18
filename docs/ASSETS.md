@@ -20,7 +20,7 @@ them with genuine hospital photography when the client supplies it.
 | `public/images/about/consultation-child.jpg` | Mission, Vision & Values hero | [Unsplash M4Xloxsg0Gw](https://unsplash.com/photos/doctor-sitting-at-the-table-in-front-of-girl-M4Xloxsg0Gw) | [Francisco Venâncio](https://unsplash.com/@franciscovenancio) | [Unsplash License](https://unsplash.com/license) |
 | `public/images/history/community-clinic.jpg` | About overview: Our history | [Pexels 34120685](https://www.pexels.com/photo/mother-with-newborn-at-clinic-in-eswatini-34120685/) | [Khaya Motsa](https://www.pexels.com/@proudlyswazi/) | [Pexels License](https://www.pexels.com/license/) |
 
-**Leadership photograph:** none supplied. The Leadership page shows an initials placeholder labelled "Photograph to follow". To add the real photo, place it in `public/images/leadership/` and set `chairman.photo` in `src/data/about.js`.
+**Leadership photograph:** `public/images/leadership/dr-akindele-raheem-cmd.jpg` (1239×1270), a portrait of Dr. Akindele Raheem A., Chairman & Chief Medical Director (CMD), supplied by the hospital (client-owned). Used on the Leadership page and the About overview. To replace it, overwrite the file or change `chairman.photo` in `src/data/about.js`.
 
 Both licences permit free commercial use without attribution. Credit is recorded here as good
 practice. Neither licence allows implying that the people shown endorse the hospital.

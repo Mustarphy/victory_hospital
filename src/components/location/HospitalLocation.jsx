@@ -1,4 +1,4 @@
-import { Clock, ExternalLink, MapPin, MapPinned, Navigation, Phone } from 'lucide-react'
+import { Clock, ExternalLink, Mail, MapPin, MapPinned, Navigation, Phone } from 'lucide-react'
 import { hospital } from '../../data/site.js'
 import Reveal from '../motion/Reveal.jsx'
 
@@ -48,7 +48,7 @@ export default function HospitalLocation({ id = 'location', heading = 'Find the 
         </h2>
         <div className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)] lg:gap-8">
           <Reveal variant="left" className="rounded-t-3xl rounded-bl-3xl bg-white p-6 shadow-heavy sm:p-8">
-            <h3 className="text-2xl leading-snug font-bold text-brand-900">{hospital.name}</h3>
+            <h3 className="text-2xl leading-snug font-bold text-brand-900">{hospital.fullName}</h3>
             <dl className="mt-6 space-y-5">
               <div className="flex gap-4">
                 <dt className="flex size-11 shrink-0 items-center justify-center rounded-full bg-brand-50 text-brand-600">
@@ -76,6 +76,20 @@ export default function HospitalLocation({ id = 'location', heading = 'Find the 
                     className="rounded-sm font-semibold text-brand-600 underline underline-offset-4 hover:text-brand-800"
                   >
                     {hospital.phone.display}
+                  </a>
+                </dd>
+              </div>
+              <div className="flex gap-4">
+                <dt className="flex size-11 shrink-0 items-center justify-center rounded-full bg-brand-50 text-brand-600">
+                  <Mail className="size-5" aria-hidden="true" />
+                  <span className="sr-only">Email</span>
+                </dt>
+                <dd className="min-w-0 pt-2.5">
+                  <a
+                    href={hospital.email.href}
+                    className="rounded-sm font-semibold break-all text-brand-600 underline underline-offset-4 hover:text-brand-800"
+                  >
+                    {hospital.email.address}
                   </a>
                 </dd>
               </div>

@@ -31,7 +31,7 @@ export const relatedPages = [
   },
   {
     title: 'Our Leadership',
-    description: 'Meet the Chairman and Chief Medical Officer of Victory Specialist Hospital.',
+    description: 'Meet the Chairman and Chief Medical Director (CMD) of Victory Specialist Hospital.',
     to: '/about/leadership',
     icon: UserRound,
   },
@@ -86,20 +86,20 @@ export const coreValues = [
 export const chairman = {
   name: 'Dr. Akindele Raheem A.',
   initials: 'AR',
-  role: 'Chairman & Chief Medical Officer',
-  // Set to an image path such as '/images/leadership/dr-akindele.jpg' once a genuine photograph is supplied.
-  photo: null,
+  role: 'Chairman & Chief Medical Director (CMD)',
+  // Photograph supplied by the hospital.
+  photo: { src: '/images/leadership/dr-akindele-raheem-cmd.jpg', width: 1239, height: 1270 },
   bio: [
-    "Dr. Akindele Raheem A. is the Chairman and Chief Medical Officer of Victory Specialist Hospital. Since steering the institution's clinical vision, he has been central to establishing the hospital as a trusted pillar of healthcare in the Ijebu North region.",
+    "Dr. Akindele Raheem A. is the Chairman and Chief Medical Director (CMD) of Victory Specialist Hospital. Since steering the institution's clinical vision, he has been central to establishing the hospital as a trusted pillar of healthcare in the Ijebu North region.",
     "With decades of clinical experience in family medicine, maternal care, and general surgery, Dr. Akindele directs the hospital's day-to-day operations and secondary care delivery.",
     'Under his leadership, the facility has grown into a licensed 14-bed community hospital operating 24 hours a day, dedicated to delivering accessible, safe, and ethical medical care to the families of Ijebu Igbo.',
   ],
   message: {
-    heading: 'A Message from Our Chief Medical Officer',
+    heading: 'A Message from Our Chief Medical Director',
     paragraphs: [
-      'For over three decades, Victory Specialist Hospital has stood as a beacon of health, safety, and comfort for the people of Ijebu Igbo. As Chief Medical Officer, my priority has always been to ensure that every patient who walks through our doors receives precise diagnostics, empathetic care, and reliable medical solutions—no matter the time of day or night.',
+      'For over three decades, Victory Specialist Hospital has stood as a beacon of health, safety, and comfort for the people of Ijebu Igbo. As Chief Medical Director, my priority has always been to ensure that every patient who walks through our doors receives precise diagnostics, empathetic care, and reliable medical solutions—no matter the time of day or night.',
       "Our healthcare environment is built entirely on trust, experience, and community service. Whether we are welcoming a new life into the world, managing chronic conditions, or addressing late-night emergencies, our medical team remains unyieldingly committed to your family's health and wellness. Thank you for making us your lifetime partners in clinical excellence.",
     ],
-    attribution: 'Chairman / Chief Medical Officer',
+    attribution: 'Chairman / Chief Medical Director (CMD)',
   },
 }

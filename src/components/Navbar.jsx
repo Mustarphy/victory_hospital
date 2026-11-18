@@ -1,6 +1,6 @@
-import { Menu, X } from 'lucide-react'
+import { CalendarCheck, Menu, X } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { navLinks } from '../data/site.js'
 import BrandMark from './BrandMark.jsx'
 import HeaderActions from './HeaderActions.jsx'
@@ -63,7 +63,16 @@ export default function Navbar() {
           </ul>
         </nav>
 
-        <HeaderActions className="hidden shrink-0 items-center gap-3 xl:flex" />
+        <HeaderActions compact className="hidden shrink-0 items-center gap-3 xl:flex" />
+        {/* Between lg and xl only the booking button fits beside the navigation. */}
+        <Link
+          to="/book-appointment"
+          className="hidden h-10 shrink-0 items-center justify-center gap-2 rounded-full bg-brand-900 px-4 text-sm font-semibold whitespace-nowrap text-white transition hover:bg-brand-800 active:scale-[0.98] lg:inline-flex xl:hidden"
+        >
+          <CalendarCheck className="size-4" aria-hidden="true" />
+          Book
+          <span className="sr-only"> an appointment</span>
+        </Link>
 
         <button
           ref={toggleRef}

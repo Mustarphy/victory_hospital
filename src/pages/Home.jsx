@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <PageMeta
-        title="Victory Specialist Hospital | Family, Maternal & Specialist Healthcare"
+        title="Victory Specialist Hospital | Centre for Reproductive Health"
         description="Victory Specialist Hospital is a licensed private secondary healthcare facility in Ijebu Igbo, Ogun State, providing family medicine, maternal and newborn care, paediatrics, obstetrics, gynaecology and general surgery. Open 24 hours daily."
         path="/"
       />

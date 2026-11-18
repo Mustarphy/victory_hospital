@@ -1,4 +1,4 @@
-import { ArrowUp, Clock, ExternalLink, HeartPulse, MapPin, Phone } from 'lucide-react'
+import { ArrowUp, CalendarCheck, Clock, ExternalLink, HeartPulse, Mail, MapPin, Phone } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { footerQuickLinks, footerServices } from '../data/footer.js'
 import { hospital } from '../data/site.js'
@@ -60,6 +60,13 @@ export default function Footer() {
               <Phone className="size-5" aria-hidden="true" />
               Call the Hospital
             </a>
+            <Link
+              to="/book-appointment"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-lg border border-white/60 px-6 font-semibold whitespace-nowrap text-white transition active:scale-[0.98] hover:bg-white hover:text-brand-900"
+            >
+              <CalendarCheck className="size-5" aria-hidden="true" />
+              Book an Appointment
+            </Link>
             <span className="text-center text-sm text-white/65 sm:text-left md:text-right">
               Hotline: <span className="font-semibold text-white">{hospital.phone.display}</span>
             </span>
@@ -85,7 +92,10 @@ export default function Footer() {
                 className="h-auto w-40 sm:w-44"
               />
             </Link>
-            <p className="mt-5 leading-relaxed">
+            <p className="mt-5 text-sm font-semibold tracking-[0.12em] text-accent-300 uppercase">
+              {hospital.designation}
+            </p>
+            <p className="mt-2 leading-relaxed">
               Providing trusted, continuous secondary healthcare to individuals and families across
               Ijebu Igbo since {hospital.established}.
             </p>
@@ -130,7 +140,7 @@ export default function Footer() {
 
           <div>
             <h2 className={headingClass}>Contact Us</h2>
-            <p className="mt-4 font-semibold text-white">{hospital.name}</p>
+            <p className="mt-4 font-semibold text-white">{hospital.fullName}</p>
             <ul className="mt-5 space-y-5">
               <ContactRow icon={MapPin} label="Address">
                 <a
@@ -162,6 +172,14 @@ export default function Footer() {
                   {hospital.phone.display}
                 </a>
               </ContactRow>
+              <ContactRow icon={Mail} label="Email">
+                <a
+                  href={hospital.email.href}
+                  className="mt-0.5 inline-flex min-h-9 items-center rounded-sm font-semibold break-all text-white transition-colors hover:text-accent-300"
+                >
+                  {hospital.email.address}
+                </a>
+              </ContactRow>
               <ContactRow icon={Clock} label="Opening hours">
                 <span className="mt-1 block text-white/85">{hospital.hours}</span>
               </ContactRow>
@@ -172,7 +190,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-col-reverse gap-4 border-t border-white/10 py-6 text-sm text-white/60 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {year} {hospital.name}. All rights reserved.
+            © {year} {hospital.fullName}. All rights reserved.
           </p>
           <button
             type="button"

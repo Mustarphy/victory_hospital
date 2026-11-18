@@ -4,6 +4,7 @@ export const footerQuickLinks = [
   { label: 'About Us', to: '/about' },
   { label: 'Our Services', to: '/services' },
   { label: 'Our Specialists', to: '/#specialists' },
+  { label: 'Book an Appointment', to: '/book-appointment' },
   { label: 'Health & Wellness', to: '/health-resources' },
   { label: 'FAQ', to: '/#faq' },
   { label: 'Contact Us', to: '/contact' },

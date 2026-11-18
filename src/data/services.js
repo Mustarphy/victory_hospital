@@ -5,6 +5,7 @@ import {
   FlaskConical,
   HeartHandshake,
   HeartPulse,
+  Hospital,
   Pill,
   Scissors,
   ShieldPlus,
@@ -76,6 +77,14 @@ export const services = [
     name: 'Non-Communicable Disease Management',
     description: 'Ongoing care for long-term conditions such as high blood pressure and diabetes.',
     icon: Activity,
+  },
+  {
+    id: 'nhs-service',
+    name: 'NHS Service',
+    description: 'Please contact our team for details of our NHS Service.',
+    icon: Hospital,
+    // Listed as supplied by the hospital. Marked as support so clinical service counts are unchanged.
+    support: true,
   },
   {
     id: 'obstetrics',

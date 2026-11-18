@@ -4,11 +4,15 @@ export default function LeaderPortrait({ leader, compact = false }) {
   if (leader.photo) {
     return (
       <img
-        src={leader.photo}
-        alt={compact ? '' : `Portrait of ${leader.name}`}
-        loading="lazy"
+        src={leader.photo.src}
+        width={leader.photo.width}
+        height={leader.photo.height}
+        // The compact avatar sits beside the name, so it is decorative.
+        alt={compact ? '' : `${leader.name}, ${leader.role} of Victory Specialist Hospital`}
+        loading={compact ? 'lazy' : 'eager'}
         decoding="async"
-        className="size-full object-cover object-top"
+        style={{ objectPosition: leader.photo.position ?? '50% 15%' }}
+        className="size-full object-cover"
       />
     )
   }

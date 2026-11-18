@@ -1,12 +1,13 @@
 import { ArrowRight, FlaskConical } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import AboutNav from '../../components/about/AboutNav.jsx'
+import LeaderPortrait from '../../components/about/LeaderPortrait.jsx'
 import RelatedLinks from '../../components/about/RelatedLinks.jsx'
 import PageHero from '../../components/PageHero.jsx'
 import AnimatedCounter from '../../components/motion/AnimatedCounter.jsx'
 import Reveal from '../../components/motion/Reveal.jsx'
 import QuickActions from '../../components/QuickActions.jsx'
-import { relatedPagesExcept, vision } from '../../data/about.js'
+import { chairman, relatedPagesExcept, vision } from '../../data/about.js'
 import { services } from '../../data/services.js'
 import { hospital } from '../../data/site.js'
 import { stagger } from '../../hooks/useInViewOnce.js'
@@ -61,7 +62,8 @@ export default function AboutOverview() {
       <section aria-label="Introduction" className="px-4 pt-12 sm:px-6 md:pt-16">
         <Reveal className="mx-auto max-w-3xl space-y-5 text-lg leading-relaxed text-ink">
           <p>
-            Victory Specialist Hospital is a licensed private secondary healthcare facility in
+            Victory Specialist Hospital (Centre for Reproductive Health) is a licensed private
+            secondary healthcare facility in
             Ijebu Igbo, Ogun State, Nigeria. Since opening on May 3, 1991, we have provided
             accessible healthcare to individuals and families, and our doors remain open 24 hours a
             day, every day.
@@ -164,6 +166,29 @@ export default function AboutOverview() {
             Read our mission, vision & values
             <ArrowRight className="size-5" aria-hidden="true" />
           </Link>
+        </Reveal>
+      </section>
+
+      <section aria-labelledby="cmd-heading" className="px-4 pb-16 sm:px-6 md:pb-24">
+        <Reveal className="mx-auto grid max-w-content items-center gap-8 overflow-hidden rounded-t-3xl rounded-bl-3xl bg-surface md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)]">
+          <div className="aspect-4/3 md:aspect-auto md:h-full md:min-h-96">
+            <LeaderPortrait leader={chairman} compact />
+          </div>
+          <div className="px-6 pb-10 md:py-12 md:pr-12 md:pl-0">
+            <p className="text-sm font-semibold tracking-[0.14em] text-brand-600 uppercase">Our leadership</p>
+            <h2 id="cmd-heading" className="mt-3 text-[2rem] leading-tight font-bold text-brand-900">
+              {chairman.name}
+            </h2>
+            <p className="mt-1 text-lg font-medium text-brand-600">{chairman.role}</p>
+            <p className="mt-5 text-lg leading-relaxed text-ink">{chairman.bio[0]}</p>
+            <Link
+              to="/about/leadership"
+              className="mt-7 inline-flex h-13 items-center justify-center gap-2 rounded-lg bg-brand-900 px-6 font-semibold text-white transition hover:bg-brand-800 active:scale-[0.98]"
+            >
+              Meet our Chief Medical Director
+              <ArrowRight className="size-5" aria-hidden="true" />
+            </Link>
+          </div>
         </Reveal>
       </section>
 

@@ -1,8 +1,11 @@
 // Single source of truth for hospital contact details. Update here only.
-const fullAddress = 'No. 6 Ajegunlesi, Oke-Sopin, Ijebu Igbo, Ogun State, Nigeria'
+const fullAddress = 'No. 6 Ajegunle Street, Oke-Sopin, Ijebu Igbo, Ogun State, Nigeria'
 
 export const hospital = {
   name: 'Victory Specialist Hospital',
+  // Official designation, shown with the name wherever the full official name is appropriate.
+  designation: 'Centre for Reproductive Health',
+  fullName: 'Victory Specialist Hospital (Centre for Reproductive Health)',
   established: 1991,
   // Official establishment date (3 May 1991). Years of service are calculated from it.
   establishedOn: '1991-05-03',
@@ -10,12 +13,17 @@ export const hospital = {
   shortAddress: 'Oke-Sopin, Ijebu Igbo, Ogun State',
   address: {
     full: fullAddress,
-    lines: ['No. 6 Ajegunlesi, Oke-Sopin', 'Ijebu Igbo, Ogun State, Nigeria'],
+    lines: ['No. 6 Ajegunle Street, Oke-Sopin', 'Ijebu Igbo, Ogun State, Nigeria'],
   },
   // Confirmed official hotline. Do not substitute another number.
   phone: {
     display: '09118179778',
     href: 'tel:09118179778',
+  },
+  // Official email for appointment requests and enquiries.
+  email: {
+    address: 'victoryspecialist1960@gmail.com',
+    href: 'mailto:victoryspecialist1960@gmail.com',
   },
   hours: 'Open 24 hours daily, 7 days a week',
   directionsUrl: `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(fullAddress)}`,
