@@ -1,6 +1,7 @@
 import {
   Activity,
   Baby,
+  Bone,
   CalendarHeart,
   FlaskConical,
   HeartHandshake,
@@ -61,8 +62,8 @@ export const services = [
   },
   {
     id: 'laboratory',
-    name: 'Laboratory',
-    description: 'Onsite laboratory for the tests your care team requests.',
+    name: 'Laboratory Tests',
+    description: 'Laboratory tests carried out in our onsite laboratory to help diagnose and monitor your health.',
     icon: FlaskConical,
     support: true,
   },
@@ -103,6 +104,14 @@ export const services = [
     name: 'Pharmacy',
     description: 'Onsite pharmacy, so you can collect prescribed medicines before you leave.',
     icon: Pill,
+    support: true,
+  },
+  {
+    id: 'x-ray',
+    name: 'X-Ray',
+    description: 'X-ray imaging to help our doctors diagnose and monitor your condition.',
+    icon: Bone,
+    // Added at the hospital's request. Marked as support (diagnostic) so clinical service counts are unchanged.
     support: true,
   },
 ]

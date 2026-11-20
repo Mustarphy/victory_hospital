@@ -13,7 +13,7 @@ The form only works once the steps below are done. Until then it shows patients 
 ## 1. Create the EmailJS service
 
 1. Create a free account at <https://www.emailjs.com/> (ideally signed in as the hospital).
-2. **Email Services → Add New Service → Gmail**, connect `victoryspecialist1960@gmail.com`.
+2. **Email Services → Add New Service → SMTP server** (or Gmail), using the `info@victoryspecialisthospital.com` mailbox details from cPanel → Email Accounts → Connect Devices.
 3. Note the **Service ID**.
 
 ## 2. Hospital notification template (required)
@@ -23,7 +23,7 @@ The form only works once the steps below are done. Until then it shows patients 
 | Setting | Value |
 |---|---|
 | Subject | `New Appointment Request – Victory Specialist Hospital ({{reference}})` |
-| To Email | `victoryspecialist1960@gmail.com` (fixed here, so visitors cannot change the recipient) |
+| To Email | `info@victoryspecialisthospital.com` (fixed here, so visitors cannot change the recipient) |
 | From Name | `Victory Specialist Hospital Website` |
 | Reply To | `{{reply_to}}` (replying goes straight to the patient) |
 
@@ -62,7 +62,7 @@ Create a second template:
 | Subject | `Appointment Request Received - Victory Specialist Hospital` |
 | To Email | `{{patient_email}}` |
 | From Name | `Victory Specialist Hospital` |
-| Reply To | `victoryspecialist1960@gmail.com` |
+| Reply To | `info@victoryspecialisthospital.com` |
 
 ```html
 <div style="font-family:Arial,Helvetica,sans-serif;max-width:600px;color:#1e2a3a;line-height:1.6;">

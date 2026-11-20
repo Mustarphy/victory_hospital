@@ -1,11 +1,11 @@
-import { hospital } from '../data/site.js'
+import { hospital, siteUrl } from '../data/site.js'
 
-const absoluteUrl = (path) => (typeof window === 'undefined' ? path : new URL(path, window.location.origin).href)
+// Production builds always point to the official domain (not www or *.vercel.app copies);
+// development uses the local server's address.
+const origin = () => (import.meta.env.PROD ? siteUrl : typeof window === 'undefined' ? siteUrl : window.location.origin)
+const absoluteUrl = (path) => new URL(path, origin()).href
 
-/**
- * Page-level SEO tags. React 19 hoists these into <head>.
- * Canonical and Open Graph URLs use the current origin, so they stay correct on any domain.
- */
+/** Page-level SEO tags. React 19 hoists these into <head>. */
 // Default social-sharing image: the official logo as supplied (designed on a black background).
 const DEFAULT_IMAGE = '/images/brand/victory-logo-original.jpg'
 

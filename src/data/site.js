@@ -1,5 +1,8 @@
 // Single source of truth for hospital contact details. Update here only.
-const fullAddress = 'No. 6 Ajegunle Street, Oke-Sopin, Ijebu Igbo, Ogun State, Nigeria'
+/** The official website address, used for canonical and social-sharing links. */
+export const siteUrl = 'https://victoryspecialisthospital.com'
+
+const fullAddress ='No. 6 Ajegunle Street, Oke-Sopin, Ijebu Igbo, Ogun State, Nigeria'
 
 export const hospital = {
   name: 'Victory Specialist Hospital',
@@ -22,8 +25,8 @@ export const hospital = {
   },
   // Official email for appointment requests and enquiries.
   email: {
-    address: 'victoryspecialist1960@gmail.com',
-    href: 'mailto:victoryspecialist1960@gmail.com',
+    address: 'info@victoryspecialisthospital.com',
+    href: 'mailto:info@victoryspecialisthospital.com',
   },
   hours: 'Open 24 hours daily, 7 days a week',
   directionsUrl: `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(fullAddress)}`,

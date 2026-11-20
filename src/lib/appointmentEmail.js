@@ -17,7 +17,7 @@ import {
  * Configure in .env (see .env.example and docs/EMAILJS.md):
  *   VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, VITE_EMAILJS_PUBLIC_KEY   (required)
  *   VITE_EMAILJS_PATIENT_TEMPLATE_ID                                           (optional acknowledgement)
- * The recipient (victoryspecialist1960@gmail.com) is set in the EmailJS template, not here,
+ * The recipient (info@victoryspecialisthospital.com) is set in the EmailJS template, not here,
  * so visitors cannot change where requests are sent.
  */
 const config = {
